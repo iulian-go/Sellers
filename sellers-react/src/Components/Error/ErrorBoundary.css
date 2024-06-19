@@ -1,0 +1,41 @@
+.notfound{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.notfound h1{
+    font-family: montserrat, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 252px;
+    font-weight: 900;
+    margin: 0;
+    color: #262626;
+    text-transform: uppercase;
+    letter-spacing: -40px;
+    margin-left: -20px;
+}
+
+.notfound h1>span{
+    text-shadow: -8px 0 0 #fff;
+}
+
+.notfound h2{
+    font-family: cabin, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 300px;
+    margin-bottom: 25px;
+}

@@ -6,3 +6,5 @@
 /SellersAPI/.vs
 /SellersAPI/SellersAPI/bin
 /SellersAPI/SellersAPI/obj
+
+.fake
