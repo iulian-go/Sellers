@@ -1,15 +1,14 @@
 ﻿namespace SellersAPI.Repositories
 {
     using Dapper;
-    using SellersAPI.Context;
     using SellersAPI.Entities;
     using SellersAPI.Interfaces;
 
     public class VendorsRepository : IVendorsRepository
     {
-        private readonly DapperContext context;
+        private readonly IDbContext context;
 
-        public VendorsRepository(DapperContext context)
+        public VendorsRepository(IDbContext context)
         {
             this.context = context;
         }

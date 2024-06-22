@@ -9,9 +9,9 @@
 
     public class DistrictsRepository : IDistrictsRepository
     {
-        private readonly DapperContext context;
+        private readonly IDbContext context;
 
-        public DistrictsRepository(DapperContext context)
+        public DistrictsRepository(IDbContext context)
         {
             this.context = context;
         }

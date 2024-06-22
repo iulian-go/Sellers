@@ -1,16 +1,17 @@
-﻿namespace SellersAPI.Context
+﻿namespace SellersAPI.Tests
 {
     using Microsoft.Data.SqlClient;
+    using Microsoft.Extensions.Configuration;
     using SellersAPI.Interfaces;
     using System.Data;
 
-    public class DapperContext : IDbContext
+    internal class TestDbContext : IDbContext
     {
         private readonly string connectionString;
 
-        public DapperContext(IConfiguration configuration)
+        public TestDbContext(IConfiguration configuration)
         {
-            this.connectionString = configuration.GetConnectionString("SqlConnection");
+            this.connectionString = configuration.GetConnectionString("SqlTestConnection");
         }
 
         public IDbConnection CreateConnection() => new SqlConnection(this.connectionString);

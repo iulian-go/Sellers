@@ -1,0 +1,9 @@
+﻿CREATE TABLE Shops (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+	TypeID INT,
+    DistrictID INT,
+	Name NVARCHAR(100) NOT NULL,
+    Address NVARCHAR(255) NOT NULL,
+    FOREIGN KEY (TypeID) REFERENCES ShopTypes(ID),
+	FOREIGN KEY (DistrictID) REFERENCES Districts(ID)
+);

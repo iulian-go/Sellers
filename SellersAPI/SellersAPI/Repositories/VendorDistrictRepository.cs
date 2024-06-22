@@ -9,9 +9,9 @@
 
     public class VendorDistrictRepository : IVendorDistrictRepository
     {
-        private readonly DapperContext context;
+        private readonly IDbContext context;
 
-        public VendorDistrictRepository(DapperContext context)
+        public VendorDistrictRepository(IDbContext context)
         {
             this.context = context;
         }

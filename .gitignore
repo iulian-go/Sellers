@@ -8,3 +8,10 @@
 /SellersAPI/SellersAPI/obj
 
 .fake
+/SellersAPI/SellersAPI.Tests/bin
+/SellersAPI/SellersAPI.Tests/obj
+/SellersAPI/SellersAPI.Tests.Database/bin
+/SellersAPI/SellersAPI.Tests.Database/obj
+*.dbmdl
+/SellersAPI/SellersAPI.Tests.Database/Import Script Logs
+*.jfm

@@ -9,16 +9,16 @@
 
     public class ShopsRepository : IShopsRepository
     {
-        private readonly DapperContext context;
+        private readonly IDbContext context;
 
-        public ShopsRepository(DapperContext context)
+        public ShopsRepository(IDbContext context)
         {
             this.context = context;
         }
 
         public async Task<IEnumerable<Shop>> GetAllByDistrictAsync(int districtId)
         {
-            var query = @"SELECT s.*, t.ID AS typeid, t.Name 
+            var query = @"SELECT s.*, t.ID, t.Name 
                           FROM Shops s 
                           JOIN ShopTypes t ON s.TypeID = t.ID 
                           WHERE DistrictId = @districtId";
@@ -30,7 +30,7 @@
                         shop.ShopType = shopType;
                         return shop;
                     },
-                    splitOn: "typeid", param: new { districtId });
+                    splitOn: "ID", param: new { districtId });
 
                 return shops.ToList();
             }
@@ -38,7 +38,7 @@
 
         public async Task<Shop> GetByIdAsync(int id)
         {
-            var query = @"SELECT s.*, t.ID AS typeid, t.Name 
+            var query = @"SELECT s.*, t.ID, t.Name 
                           FROM Shops s 
                           JOIN ShopTypes t ON s.TypeID = t.ID 
                           WHERE s.ID = @Id";
@@ -50,7 +50,7 @@
                         shop.ShopType = shopType;
                         return shop;
                     },
-                    splitOn: "typeid", param: new { id });
+                    splitOn: "ID", param: new { id });
                 return shop.FirstOrDefault();
             }
         }

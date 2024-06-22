@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "SqlTestConnection": "Data Source=(localdb)\\ProjectModels;Initial Catalog=SellersAPI.Tests.Database;Integrated Security=True;Pooling=False;Connect Timeout=30"
+  }
+}
