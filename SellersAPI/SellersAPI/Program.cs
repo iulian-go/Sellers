@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddSingleton<IDbContext, DapperContext>();
 builder.Services.AddScoped<IDistrictsRepository, DistrictsRepository>();
 builder.Services.AddScoped<IShopsRepository, ShopsRepository>();
 builder.Services.AddScoped<IVendorsRepository, VendorsRepository>();
